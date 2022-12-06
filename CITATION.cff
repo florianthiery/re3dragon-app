@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+authors:
+  - family-names: Thiery
+    given-names: Florian
+    orcid: https://orcid.org/0000-0002-3246-3531
+title: "re3dragon - REsearch REsource REgistry for DataDragons"
+abstract: REsearch REsource REgistry for DataDragons
+version: 1.0
+type: software
+doi: 10.5281/zenodo.xyz
+date-released: 2022-12-06
+identifiers:
+  - description: This is the collection of archived snapshots of all versions
+    type: doi
+    value: "10.5281/zenodo.xyz"
+  - description: This is the archived snapshot of version 1.0
+    type: doi
+    value: "10.5281/zenodo.xyz"
+repository-code: "https://github.com/RGZM/re3dragon-app"
+keywords:
+  - "Linked Open Data"
+  - "Thesauri"
+contact:
+  - affiliation: "RGZM, Mainz Germany"
+    email: florian.thiery@rgzm.de
+    family-names: Florian
+    given-names: Thiery
+preferred-citation:
+  authors:
+    - family-names: Thiery
+      given-names: Florian
+  title: "re3dragon Webapp"
+  type: software
+  year: 2022
