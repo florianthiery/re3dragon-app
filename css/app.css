@@ -269,3 +269,13 @@ so lets define a new style for the selected events */
     width: 100%;
     z-index: 50;
 }
+
+a.link-white {
+    color: white;
+    text-decoration: underline;
+}
+
+a.link-white:hover {
+    color: gray;
+    text-decoration: underline;
+}

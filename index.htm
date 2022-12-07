@@ -34,7 +34,7 @@
 <body>
 	<div id="header">
 		<div id="header_pt1"><i class='fa fa-bars' aria-hidden='true'></i>&nbsp;</div>
-		<div id="header_pt2"><b>tools.rgzm.de</b></div>
+		<div id="header_pt2"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;<b>LEIZA.tools</b></div>
 		<div id="header_pt1_r"><i class='fa fa-envelope' aria-hidden='true'></i></div>
 		<!--<div id="header_pt2_r"><i class='fa fa-globe' aria-hidden='true'></i>&nbsp;English</div>-->
 		<div id="header_pt3_r">About RGZM Research Tools</div>
@@ -67,16 +67,51 @@
 					<strong>What can I do?</strong>
 					<br><br>
 					<ul class="list-group">
-						<li class="list-group-item">1. Search for Items in Ressources by using a substring.</li>
-						<li class="list-group-item">2. Resolve a URI.</li>
+						<li class="list-group-item">1. Resolve a URI.</li>
+						<li class="list-group-item">2. Search for Items in Ressources by using a substring.</li>
 						<li class="list-group-item">3. Resolve a list of URIs.</li>
 						<!--<li class="list-group-item">4. Get a list of the dragon lairs.</li>-->
 					</ul>
 				</div>
 			</div>
+			<div id="app-div-2" width="100%" class="alert alert-info" style="margin:10px;">
+				<fieldset>
+					<strong>1. Resolve a URI</strong>
+					<br><br>
+					<p>Insert a URI, e.g. http://vocab.getty.edu/aat/300262907 (autoboat)</p>
+					<div class="input-group  input-group-lg">
+						<span class="input-group-btn">
+							<button id="resolve-btn" class="btn btn-primary" type="button"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Resolve</button>
+						</span>
+						<input id="resolve-inp" type="text" class="form-control" placeholder="">
+					</div>
+				</fieldset>
+			</div>
+			<div id="app-resultdiv-2" width="100%" class="alert alert-info" style="margin:10px;">
+				<fieldset>
+					<h1>uri</h1>
+					<div id="si-uri"></div>
+					<h1>type</h1>
+					<div id="si-type"></div>
+					<h1>display label</h1>
+					<div id="si-preflabel"></div>
+					<h1>display description</h1>
+					<div id="si-prefdesc"></div>
+					<h1>preference labels</h1>
+					<div id="si-labels"></div>
+					<h1>descriptions</h1>
+					<div id="si-descriptions"></div>
+					<h1>broader</h1>
+					<div id="si-broader"></div>
+					<h1>narrower</h1>
+					<div id="si-narrower"></div>
+					<h1>dragon lair</h1>
+					<div id="si-dragonlair"></div>
+				</fieldset>
+			</div>
 			<div id="app-div-1" width="100%" class="alert alert-info" style="margin:10px;">
 				<fieldset>
-					<strong>1. Search for Items in Ressources by using a substring.</strong>
+					<strong>2. Search for Items in Ressources by using a substring.</strong>
 					<br><br>
 					<p>Insert substring and choose a dragon lair to query</p>
 					<div class="input-group input-group-lg">
@@ -93,28 +128,9 @@
 					</div>
 				</fieldset>
 			</div>
-			<div id="app-div-2" width="100%" class="alert alert-info" style="margin:10px;">
+			<div id="app-resultdiv-1" width="100%" class="alert alert-info" style="margin:10px;">
 				<fieldset>
-					<strong>2. Resolve a URI</strong>
-					<br><br>
-					<p>Insert a URI, e.g. http://vocab.getty.edu/aat/300262907 (autoboat)</p>
-					<div class="input-group  input-group-lg">
-						<span class="input-group-btn">
-							<button id="resolve-btn" class="btn btn-primary" type="button"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Resolve</button>
-						</span>
-						<input id="resolve-inp" type="text" class="form-control" placeholder="">
-					</div>
-				</fieldset>
-			</div>
-			<div id="app-resultdiv-2" width="100%" class="alert alert-info" style="margin:10px;">
-				<fieldset>
-					<strong>results from URI xyz</strong>
-					<br><br>
-					<ul class="list-group">
-						<li class="list-group-item">
-							<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-						</li>
-					</ul>
+					<span id="search-results"></span>
 				</fieldset>
 			</div>
 			<div id="app-div-3" width="100%" class="alert alert-info" style="margin:10px;">
@@ -128,6 +144,11 @@
 						</span>
 						<input id="resolve-list-inp" type="text" class="form-control" placeholder="http://vocab.getty.edu/aat/300262907,http://vocab.getty.edu/aat/300178739">
 					</div>
+				</fieldset>
+			</div>
+			<div id="app-resultdiv-3" width="100%" class="alert alert-info" style="margin:10px;">
+				<fieldset>
+					<span id="list-results"></span>
 				</fieldset>
 			</div>
 			<div id="break-div" width="100%" style="margin:10px;">
