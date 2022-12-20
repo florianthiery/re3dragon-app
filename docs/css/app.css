@@ -5,6 +5,11 @@
 
 h1 {
   margin-left: 10px;
+  color: white !important;
+}
+
+h1.header {
+  margin-left: 10px;
   color: #4f628b !important;
 }
 
