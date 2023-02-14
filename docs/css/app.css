@@ -265,7 +265,8 @@ so lets define a new style for the selected events */
 #footer {
   float: left;
   height: 90px;
-  background-color: #fed37a;
+  background-color: #4f628b;
+  color: white;
   width: 100%;
 }
 
@@ -284,5 +285,18 @@ a.link-white {
 
 a.link-white:hover {
   color: gray;
+  text-decoration: underline;
+}
+
+a.footera {
+  color: white !important;
+}
+
+a.footera:visited {
+  color: white !important;
+}
+
+a.footera:hover {
+  color: white !important;
   text-decoration: underline;
 }
