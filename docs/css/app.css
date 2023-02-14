@@ -168,7 +168,8 @@ so lets define a new style for the selected events */
   float: left;
   height: 50px;
   margin-bottom: 20px;
-  background: linear-gradient(to right, #17233b, #4f628b);
+  /*background: linear-gradient(to right, #17233b, #4f628b);*/
+  background: #17233b;
   width: 100%;
   position: fixed;
   top: 0;
